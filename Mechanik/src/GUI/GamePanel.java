@@ -9,7 +9,7 @@ public class GamePanel extends JPanel {
 
 	public GamePanel() {
 		super();
-	
+		setName("Mechanik");
 	}
 	
 	public void paint(Graphics g) {

@@ -16,10 +16,9 @@ public class MainFrame extends JFrame implements WindowListener{
 		
 		add(new MainPanel());
 		add(new StartButton(),BorderLayout.SOUTH);
-		//add(new TitlePanel());
 		
 		addWindowListener(this);
-		
+		setTitle("Mechanik - START");
 		setSize(new Dimension(900, 700));
 		setLocationRelativeTo(null);
 		setVisible(true);
