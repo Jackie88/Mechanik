@@ -1,7 +1,5 @@
 package Grafa;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-public class Reka implements KeyListener{
+public class Reka{
 	private int x,y;
 	
 	public Reka(int x, int y){
@@ -53,23 +51,5 @@ public class Reka implements KeyListener{
 			y=20;
 		if(this.y<1) 
 			y=1;
-	}
-	@Override
-	public void keyPressed(KeyEvent e) {
-	}
-
-	@Override
-	public void keyReleased(KeyEvent e) {
-		switch (e.getKeyCode()) {
-        case KeyEvent.VK_DOWN : this.decrementX(); break;
-        case KeyEvent.VK_UP : this.incrementX(); break;
-        case KeyEvent.VK_LEFT : this.decrementY(); break;
-        case KeyEvent.VK_RIGHT : this.incrementY(); break;
-		}
-	}
-
-	@Override
-	public void keyTyped(KeyEvent evt) {
-
 	}
 }

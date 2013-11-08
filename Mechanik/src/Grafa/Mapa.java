@@ -18,6 +18,9 @@ public class Mapa extends JPanel implements KeyListener {
         czesci[11][11] = new Czesc("Nazwa2",1,Color.RED);
         czesci[11][13] = new Czesc("Nazwa3",1,Color.GREEN);
         czesci[12][12] = new Czesc("Nazwa4",1,Color.BLUE);
+        setFocusable(true);
+        requestFocus();
+        addKeyListener(this);
     }
  
     @Override
@@ -46,23 +49,15 @@ public class Mapa extends JPanel implements KeyListener {
     }
     @Override
 	public void keyPressed(KeyEvent e) {
-    	switch (e.getKeyCode()) {
-        case KeyEvent.VK_DOWN : reka.decrementX(); break;
-        case KeyEvent.VK_UP : reka.incrementX(); break;
-        case KeyEvent.VK_LEFT : reka.decrementY(); break;
-        case KeyEvent.VK_RIGHT : reka.incrementY(); break;
-		}
-		validate();
-		repaint();
 	}
 
 	@Override
 	public void keyReleased(KeyEvent e) {
 		switch (e.getKeyCode()) {
-        case KeyEvent.VK_DOWN : reka.decrementX(); break;
-        case KeyEvent.VK_UP : reka.incrementX(); break;
-        case KeyEvent.VK_LEFT : reka.decrementY(); break;
-        case KeyEvent.VK_RIGHT : reka.incrementY(); break;
+        case KeyEvent.VK_DOWN : reka.incrementY(); break;
+        case KeyEvent.VK_UP : reka.decrementY(); break;
+        case KeyEvent.VK_LEFT : reka.decrementX(); break;
+        case KeyEvent.VK_RIGHT : reka.incrementX(); break;
 		}
 		validate();
 		repaint();
