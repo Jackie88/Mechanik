@@ -43,6 +43,7 @@ public class Mapa extends JPanel implements KeyListener {
             		g.drawRoundRect((i-1)*getWidth()/a, (j-1)*getHeight()/a, 18, 18,5,5);
             	}
             g.setColor(Color.lightGray);
+            // siema
         }
         g.setColor(Color.orange);
         g.fillRoundRect((reka.getX()-1)*getWidth()/a, (reka.getY()-1)*getHeight()/a, 18, 18, 5, 5);
