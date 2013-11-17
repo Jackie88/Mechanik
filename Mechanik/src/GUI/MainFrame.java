@@ -18,12 +18,13 @@ public class MainFrame extends JFrame implements WindowListener{
 		add(new StartButton(),BorderLayout.SOUTH);
 		
 		addWindowListener(this);
-		setTitle("Mechanik - START");
+		setTitle("Mechanik");
 		setSize(new Dimension(900, 700));
 		setLocationRelativeTo(null);
 		setVisible(true);
 		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		setResizable(false);
+		requestFocus();
 		
 	}
 
