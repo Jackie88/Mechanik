@@ -1,9 +1,7 @@
 package GUI;
 
-import java.awt.Color;
 import java.awt.Font;
 import java.awt.GridBagLayout;
-import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 

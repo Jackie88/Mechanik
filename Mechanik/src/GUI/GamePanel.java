@@ -2,12 +2,12 @@ package GUI;
 
 import Grafa.*;
 import java.awt.*;
-import java.awt.geom.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import javax.swing.BorderFactory;
 import javax.swing.JPanel;
  
+@SuppressWarnings("serial")
 public class GamePanel extends JPanel implements KeyListener {
 	
 	private Reka reka;
@@ -40,7 +40,6 @@ public class GamePanel extends JPanel implements KeyListener {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        Graphics2D g2d = (Graphics2D) g;
          
         g.setColor(Color.lightGray);
           

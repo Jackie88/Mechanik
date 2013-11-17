@@ -3,8 +3,9 @@ package Grafa;
 import java.awt.*;
 
 public class Czesc {
-	private int x,y;
+	//private int x,y;
 	private int stan;
+	@SuppressWarnings("unused")
 	private String nazwa;
 	private Color kolor;
 	
