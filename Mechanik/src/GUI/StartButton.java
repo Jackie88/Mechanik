@@ -11,6 +11,7 @@ import javax.swing.JButton;
 public class StartButton extends JButton implements ActionListener {
 	
 	public StartButton() {
+		
 		super();
 		addActionListener(this);
 		

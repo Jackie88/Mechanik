@@ -14,22 +14,23 @@ public class MainDialog extends JDialog {
 	private static Konsola txtArea;
 	
 	public MainDialog(){
+		
 		super();
 		panel =new GamePanel();
-		setLayout(new BorderLayout(20, 20));
-		add(panel );
-		add(new SouthMainPanel(), BorderLayout.SOUTH);
 		txtArea = new Konsola();
-		add(txtArea, BorderLayout.EAST);
-		add(new JLabel(""), BorderLayout.WEST);
-		add(new TopMainPanel(),BorderLayout.PAGE_START);
-		System.out.println(getLayout());
 		
+		setLayout(new BorderLayout(20, 20));
 		setTitle("Napraw swoje auto !");
 		setVisible(true);
 		setSize(new Dimension(800, 650));
 		setLocationRelativeTo(null);
 		getContentPane().setBackground(Color.white);
+		
+		add(panel );
+		add(new SouthMainPanel(), BorderLayout.SOUTH);
+		add(txtArea, BorderLayout.EAST);
+		add(new JLabel(""), BorderLayout.WEST);
+		add(new TopMainPanel(),BorderLayout.PAGE_START);
 	
 	}
 	

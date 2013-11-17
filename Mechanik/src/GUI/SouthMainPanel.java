@@ -28,18 +28,16 @@ public class SouthMainPanel extends JPanel implements FocusListener, ActionListe
 		setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 		
 		but = new JButton("Siema");
+		but.setPreferredSize(new Dimension(100, 30));
+		but.addActionListener(this);
+		
 		txt = new JTextField("Wpisz komende");
 		txt.setForeground(Color.lightGray);
-		but.setPreferredSize(new Dimension(100, 30));
+		txt.addFocusListener(this);
+		txt.addActionListener(this);
 		
 		add(but, BorderLayout.EAST);
 		add(txt);
-		
-		txt.addFocusListener(this);
-		but.addActionListener(this);
-		txt.addActionListener(this);
-	
-		
 	}
 	
 	public static String getCmd () {
