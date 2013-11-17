@@ -1,0 +1,28 @@
+package GUI;
+
+import java.awt.Font;
+
+import javax.swing.BorderFactory;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class TopMainPanel extends JPanel {
+
+	private JLabel label;
+	private String time;
+	
+	public TopMainPanel() {
+		
+		super();
+		time = "Pozostały czas : " + "czas";
+		label = new JLabel(time);
+		label.setAlignmentX(CENTER_ALIGNMENT);
+		label.setAlignmentY(CENTER_ALIGNMENT);
+		label.setFont(new Font(Font.SERIF, Font.PLAIN, 25));
+		
+		setBorder(BorderFactory.createEmptyBorder(20, 0, 0, 0));
+		add(label);
+		setOpaque(false);
+	}
+	
+}
