@@ -18,6 +18,7 @@ public class MainFrame extends JFrame implements WindowListener{
 		add(new StartButton(),BorderLayout.SOUTH);
 		
 		addWindowListener(this);
+		
 		setTitle("Mechanik");
 		setSize(new Dimension(900, 700));
 		setLocationRelativeTo(null);
@@ -70,7 +71,5 @@ public class MainFrame extends JFrame implements WindowListener{
 		// TODO Auto-generated method stub
 		
 	}
-
-	
 	
 }

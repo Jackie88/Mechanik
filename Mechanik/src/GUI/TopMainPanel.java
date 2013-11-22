@@ -15,7 +15,7 @@ public class TopMainPanel extends JPanel {
 	public TopMainPanel() {
 		
 		super();
-		time = "Pozostały czas : " + "czas";
+		time = "Pozostaly czas : " + "czas";
 		
 		label = new JLabel(time);
 		label.setAlignmentX(CENTER_ALIGNMENT);

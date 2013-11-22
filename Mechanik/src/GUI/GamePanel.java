@@ -1,10 +1,16 @@
 package GUI;
 
 import Grafa.*;
+
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.awt.image.BufferedImage;
+import java.net.URL;
+
 import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
  
 @SuppressWarnings("serial")
@@ -13,10 +19,12 @@ public class GamePanel extends JPanel implements KeyListener {
 	private Reka reka;
 	private Czesc[][] czesci;
 	private static int a=15;
+	private ImageIcon icon;
    
 	public GamePanel() {
-       
-		//setPreferredSize(new Dimension(400, 400));
+ 
+		JLabel lab = new JLabel(icon);
+		add(lab);
 		
         reka = new Reka(5,5);
         czesci = new Czesc[a][a];
@@ -36,13 +44,13 @@ public class GamePanel extends JPanel implements KeyListener {
 		return a;
 	}
 	
-	
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
          
         g.setColor(Color.lightGray);
-          
+        
+        
         for(int i=1; i<a; i++) {
         	g.drawLine(i*getWidth()/a, 0, i*getWidth()/a, getHeight());
             g.drawLine(0, i*getHeight()/a, getWidth(), i*getHeight()/a);
@@ -55,8 +63,10 @@ public class GamePanel extends JPanel implements KeyListener {
             
         }
         
-        g.setColor(Color.orange);
-        g.fillRoundRect((reka.getX()-1)*getWidth()/a+5, (reka.getY()-1)*getHeight()/a+5, getWidth()/a-10, getHeight()/a-10, 5, 5);
+    	//rysuje obrazek lapki
+    	icon = new ImageIcon(new Resize().resize("img/lapka.png", getWidth()/a-10,getHeight()/a-10,true));
+        g.drawImage(icon.getImage(), (reka.getX()-1)*getWidth()/a+5, (reka.getY()-1)*getHeight()/a+5, null);
+        
     }
     @Override
 	public void keyPressed(KeyEvent e) {
@@ -65,10 +75,22 @@ public class GamePanel extends JPanel implements KeyListener {
 	@Override
 	public void keyReleased(KeyEvent e) {
 		switch (e.getKeyCode()) {
-        case KeyEvent.VK_DOWN : reka.incrementY(); break;
-        case KeyEvent.VK_UP : reka.decrementY(); break;
-        case KeyEvent.VK_LEFT : reka.decrementX(); break;
-        case KeyEvent.VK_RIGHT : reka.incrementX(); break;
+		
+        case KeyEvent.VK_DOWN :
+        	reka.incrementY();
+        	break;
+        	
+        case KeyEvent.VK_UP : 
+        	reka.decrementY(); 
+        	break;
+        	
+        case KeyEvent.VK_LEFT : 
+        	reka.decrementX(); 
+        	break;
+        	
+        case KeyEvent.VK_RIGHT : 
+        	reka.incrementX(); 
+        	break;
 		}
 		validate();
 		repaint();

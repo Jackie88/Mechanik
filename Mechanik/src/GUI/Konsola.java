@@ -15,6 +15,8 @@ public class Konsola extends JTextArea {
 		setFocusable(false);
 		//setBackground(Color.black);
 		//setForeground(Color.white);
+		setLineWrap(true);
+		
 		
 	}
 	

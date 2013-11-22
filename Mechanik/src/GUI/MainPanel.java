@@ -18,7 +18,7 @@ public class MainPanel extends GradientPanel {
 		JLabel title = new JLabel("Witamy w Mechaniku !!!");
 		myFont = title.getFont().getName();
 	
-		title.setFont(new Font(myFont, Font.PLAIN, 80));
+		title.setFont(new Font(myFont, Font.BOLD, 70));
 		title.setAlignmentX(SwingConstants.CENTER);
 		title.setAlignmentY(SwingConstants.CENTER);
 		

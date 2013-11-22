@@ -61,10 +61,9 @@ public class SouthMainPanel extends JPanel implements FocusListener, ActionListe
 	public void actionPerformed(ActionEvent e) {
 		
 		cmd=txt.getText();
-		txt.setForeground(Color.lightGray);
-		txt.setText("Wpisz komende");
+		//txt.setForeground(Color.lightGray);
+		txt.setText("");
 		
-		MainDialog.getPanel().requestFocus();
 		MainDialog.getKonsola().append("Ja : " + cmd + newline + "Komp : costam" + newline);
 	
 	}
