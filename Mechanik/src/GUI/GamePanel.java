@@ -18,7 +18,7 @@ public class GamePanel extends JPanel implements KeyListener {
 	
 	private Reka reka;
 	private Czesc[][] czesci;
-	private static int a=15;
+	private static int a=10;
 	private ImageIcon icon;
    
 	public GamePanel() {
@@ -28,10 +28,11 @@ public class GamePanel extends JPanel implements KeyListener {
 		
         reka = new Reka(5,5);
         czesci = new Czesc[a][a];
-        czesci[5][8] = new Czesc("Nazwa",1,Color.BLUE);
-        czesci[6][9] = new Czesc("Nazwa2",1,Color.RED);
-        czesci[10][4] = new Czesc("Nazwa3",1,Color.GREEN);
-        czesci[3][6] = new Czesc("Nazwa4",1,Color.BLUE);
+        czesci[1][4] = new Kolo("Nazwa",2);
+        czesci[1][5] = czesci[1][4];
+        czesci[1][6] = new Kolo("Nazwa2",2);
+        czesci[5][1] = new Kolo("Nazwa3",3);
+        czesci[4][1] = new Kolo("Nazwa4",1);
         
         setBorder(BorderFactory.createLoweredBevelBorder());
         setFocusable(true);
@@ -90,6 +91,12 @@ public class GamePanel extends JPanel implements KeyListener {
         	
         case KeyEvent.VK_RIGHT : 
         	reka.incrementX(); 
+        	break;
+        case KeyEvent.VK_ENTER :
+        	MainDialog.getKonsola().append("Mechanik: "+czesci[reka.getX()][reka.getY()].wyswietlStan()+"\n");
+        	break;
+        case KeyEvent.VK_SPACE :
+        	MainDialog.getKonsola().append("Mechanik: "+czesci[reka.getX()][reka.getY()].napraw()+"\n");
         	break;
 		}
 		validate();
