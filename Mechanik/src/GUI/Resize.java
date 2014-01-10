@@ -35,4 +35,13 @@ public class Resize {
 		
 	}
 	
+	public Image resize(Image img, int width, int height, boolean b) {
+		
+		//ClassLoader cldr = this.getClass().getClassLoader();
+		//URL imageURL = cldr.getResource("img/" + src);
+		
+	    return img.getScaledInstance(width, height, Image.SCALE_SMOOTH);
+		
+	}
+	
 }

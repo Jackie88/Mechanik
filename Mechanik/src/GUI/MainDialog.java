@@ -24,7 +24,7 @@ public class MainDialog extends JDialog {
 		
 		super();
 		panel =new GamePanel();
-
+		
 		txtArea = new Konsola();
 		
 		setLayout(new BorderLayout(20, 20));

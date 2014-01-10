@@ -2,13 +2,18 @@ package Grafa;
 
 import java.awt.Color;
 
+import javax.swing.ImageIcon;
+
 public class Kolo extends Czesc{
+	
 	public Kolo(String nazwa, int stan){
+		
 		super(nazwa, stan);
+		
 		switch(stan){
-		case 1: this.kolor = Color.GREEN;break;
-		case 2: this.kolor = Color.YELLOW;break;
-		case 3: this.kolor = Color.RED;break;
+		case 1: img = new ImageIcon("img/opona.png").getImage(); break;
+		case 2: img = new ImageIcon("img/opona2.png").getImage(); break;
+		case 3: img = new ImageIcon("img/opona3.png").getImage(); break;
 		}
 	}
 	
@@ -28,7 +33,7 @@ public class Kolo extends Czesc{
 			case 2: wykonana_akcja = "Nadmuchałem koło";break;
 			case 3: wykonana_akcja = "Koło wymienione, można jechać:)";break;
 		};
-		this.kolor = Color.GREEN;
+		this.img=  new ImageIcon("img/opona.png").getImage();
 		return wykonana_akcja;
 	}
 }
