@@ -1,7 +1,5 @@
 package Grafa;
 
-import java.awt.Color;
-
 import javax.swing.ImageIcon;
 
 public class Kolo extends Czesc{
@@ -33,7 +31,8 @@ public class Kolo extends Czesc{
 			case 2: wykonana_akcja = "Nadmuchałem koło";break;
 			case 3: wykonana_akcja = "Koło wymienione, można jechać:)";break;
 		};
-		this.img=  new ImageIcon("img/opona.png").getImage();
+		this.stan = 1;
+		this.img = new ImageIcon("img/opona.png").getImage();
 		return wykonana_akcja;
 	}
 }

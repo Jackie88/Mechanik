@@ -2,7 +2,7 @@ package Grafa;
 
 import java.awt.*;
 
-import javax.swing.ImageIcon;
+//import javax.swing.ImageIcon;
 
 public abstract class Czesc {
 	
@@ -18,6 +18,6 @@ public abstract class Czesc {
 	public abstract String wyswietlStan();
 	public abstract String napraw();
 	
-	public Image getColor(){return img;}
+	public Image getImage(){return img;}
 
 }

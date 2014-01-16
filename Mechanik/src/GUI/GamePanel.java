@@ -6,9 +6,9 @@ import Grafa.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.awt.image.BufferedImage;
-import java.awt.image.ImageObserver;
-import java.net.URL;
+//import java.awt.image.BufferedImage;
+//import java.awt.image.ImageObserver;
+//import java.net.URL;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
@@ -30,10 +30,12 @@ public class GamePanel extends JPanel implements KeyListener {
 		
         reka = new Reka(5,5);
         czesci = new Czesc[a][a];
-        czesci[1][4] = new Kolo("Nazwa",2);
-        czesci[1][6] = new Kolo("Nazwa2",2);
-        czesci[5][1] = new Kolo("Nazwa3",3);
-        czesci[4][1] = new Kolo("Nazwa4",1);
+        czesci[4][3] = new Kolo("Nazwa",2);
+        czesci[4][7] = new Kolo("Nazwa2",2);
+        czesci[7][3] = new Kolo("Nazwa3",3);
+        czesci[7][7] = new Kolo("Nazwa4",1);
+        czesci[6][4] = new Bak("Nazwa",2);
+        czesci[6][7] = new Akumulator("Nazwa",2);
         
         setBorder(BorderFactory.createLoweredBevelBorder());
         setFocusable(true);
@@ -60,7 +62,7 @@ public class GamePanel extends JPanel implements KeyListener {
             g.drawLine(0, i*getHeight()/a, getWidth(), i*getHeight()/a);
             for(int j=1; j<a; j++)
             	if (czesci[i][j] != null){
-            		g.drawImage((new ImageIcon(new Resize().resize(czesci[i][j].getColor(), getWidth()/a-10,getHeight()/a-10,true))).getImage(),(i-1)*getWidth()/a+2, (j-1)*getHeight()/a+2, null);
+            		g.drawImage((new ImageIcon(new Resize().resize(czesci[i][j].getImage(), getWidth()/a-10,getHeight()/a-10,true))).getImage(),(i-1)*getWidth()/a+2, (j-1)*getHeight()/a+2, null);
             		
             	}
             g.setColor(Color.lightGray);
