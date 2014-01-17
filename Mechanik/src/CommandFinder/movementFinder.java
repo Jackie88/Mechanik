@@ -16,7 +16,7 @@ public class movementFinder {
 					break;
 					case "lewo": koordynaty=4;
 					break;
-					default: koordynaty=0; break;}
-		}
+					//default: koordynaty=0; break;}
+		}}
 		return koordynaty;}}
 
