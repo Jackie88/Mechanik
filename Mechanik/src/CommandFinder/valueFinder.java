@@ -1,9 +1,9 @@
 package CommandFinder;
 
 public class valueFinder {
-	public static int findValue(String[] inputExpression){
+	public static String findValue(String[] inputExpression){
 		
-		int foundValue = -1;
+		String foundValue = "-1";
 		String[][] numbersWordList = new String[11][2];	
 		
 		numbersWordList[0][0]="0";
@@ -33,11 +33,10 @@ public class valueFinder {
 		for (String s1 : inputExpression){
 			for(int i = 0; i<=10; i++){
 				for(String j : numbersWordList[i]){
-					if(s1.matches(j)) foundValue=i;
+					if(s1.matches(j)) foundValue=Integer.toString(i);
 				}
 			}
 		}
 		return foundValue;
-		
 	}
 }

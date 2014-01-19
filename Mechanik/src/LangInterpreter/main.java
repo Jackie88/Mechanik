@@ -23,16 +23,13 @@ public class main {
         //@TODO a co je¿eli ktoœ u¿yje "i" albo "oraz"?
         
         String[] czesciZdania = wprowadzonaKomenda.split(",");
-        int[] action;
+        String[] action ={"-1","-1"};
+
         for(String i : czesciZdania){
         	String[] temp = stringOps.przygotujZdanie(i);
         	action = commandFinder.commandFinder(temp);
-        	switch(action[0]){
-        	case 1: System.out.println("Idê w górê o " + action[1]); break;
-        	case 2: System.out.println("Idê w prawo o " + action[1]); break;
-        	case 3: System.out.println("Idê w dó³ o " + action[1]); break;
-        	case 4: System.out.println("Idê w lewo o " + action[1]); break;
-        	default: System.out.println("Coœ jest nie halo, ch³opcze"); break;
+        	if(!(action[0].equals("-1"))) System.out.print(action[0] + " ");
+        	if(!(action[1].equals("-1"))) System.out.print(action[1] + " ");
+        	System.out.println();
         }}
     }
-}

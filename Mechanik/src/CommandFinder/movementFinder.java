@@ -1,9 +1,9 @@
 package CommandFinder;
 
 public class movementFinder {
-	public static int[] findMovement(String[] inputExpression){
-		int[] movementDirection = {-1,-1};
-		String[] movementWordList = {"id[zŸ]","porusz","rusz","le[cæ]","przejd[zŸ]","przeskocz","ruszaj"};
+	public static String[] findMovement(String[] inputExpression){
+		String[] foundCommand = {"-1","-1"};
+		String[] movementWordList = {"id[zŸ]","porusz","rusz","le[cæ]","przejd[zŸ]","przeskocz","ruszaj","kiknij"};
 		String[] movementUpList = {"g[oó]r[aeê]","p[oó][l³]noc"};
 		String[] movementRightList = {"prawo","wsch[oó]d"};
 		String[] movementDownList = {"d[oó][l³]","po[l³]udnie"};
@@ -15,25 +15,25 @@ public class movementFinder {
 				for(String s2 : inputExpression){
 					
 					for(String upWordPattern : movementUpList)
-					if(s2.matches(upWordPattern)){movementDirection[0]=1;
-					movementDirection[1]=valueFinder.findValue(inputExpression);
+					if(s2.matches(upWordPattern)){foundCommand[0]="up";
+					foundCommand[1]=valueFinder.findValue(inputExpression);
 					break;}
 					
 					for(String rightWordPattern : movementRightList)
-					if(s2.matches(rightWordPattern)){movementDirection[0]=2;
-					movementDirection[1]=valueFinder.findValue(inputExpression);
+					if(s2.matches(rightWordPattern)){foundCommand[0]="right";
+					foundCommand[1]=valueFinder.findValue(inputExpression);
 					break;}
 					
 					for(String downWordPattern : movementDownList)
-					if(s2.matches(downWordPattern)){movementDirection[0]=3;
-					movementDirection[1]=valueFinder.findValue(inputExpression);
+					if(s2.matches(downWordPattern)){foundCommand[0]="down";
+					foundCommand[1]=valueFinder.findValue(inputExpression);
 					break;}
 					
 					for(String leftWordPattern : movementLeftList)
-					if(s2.matches(leftWordPattern)){movementDirection[0]=4;
-					movementDirection[1]=valueFinder.findValue(inputExpression);
+					if(s2.matches(leftWordPattern)){foundCommand[0]="left";
+					foundCommand[1]=valueFinder.findValue(inputExpression);
 					break;}
 					
 		}}
-		return movementDirection;}}
+		return foundCommand;}}
 
