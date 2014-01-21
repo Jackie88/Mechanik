@@ -1,15 +1,19 @@
 package Grafa;
 
 import GUI.GamePanel;
+import GUI.MainDialog;
 
 public class Reka{
 	
+	private GamePanel panel;
 	private int x,y,k;
 	
-	public Reka(int a, int b){
+	public Reka(GamePanel temp, int a, int b){
 		x = a;
 		y = b;
 		k=GamePanel.getA();
+		
+		panel=temp;
 	}
 	
 	public int getX(){return x;}
@@ -49,4 +53,17 @@ public class Reka{
 		if(y<1) 
 			y=k;
 }
+	
+	public void napraw(){
+		Czesc [] [] czesci =  panel.getCzesci();
+		czesci[getX()][getY()].napraw();
+    	MainDialog.getKonsola().append("Mechanik: "+czesci[getX()][getY()].napraw()+"\n");
+
+	}
+	public void sprawdz(){
+		Czesc [] [] czesci =  panel.getCzesci();
+		czesci[getX()][getY()].wyswietlStan();
+    	MainDialog.getKonsola().append("Mechanik: "+czesci[getX()][getY()].wyswietlStan()+"\n");
+
+	}
 }

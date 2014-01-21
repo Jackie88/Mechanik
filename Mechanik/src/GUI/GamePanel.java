@@ -28,7 +28,7 @@ public class GamePanel extends JPanel implements KeyListener {
 		JLabel lab = new JLabel(icon);
 		add(lab);
 		
-        reka = new Reka(5,5);
+        reka = new Reka(this,5,5);
         czesci = new Czesc[a][a];
         czesci[4][3] = new Kolo("Nazwa",2);
         czesci[4][7] = new Kolo("Nazwa2",2);
@@ -51,6 +51,10 @@ public class GamePanel extends JPanel implements KeyListener {
 	
 	public Reka getReka() {
 		return reka;
+	}
+	
+	public Czesc[][] getCzesci()  {
+		return czesci;
 	}
 	
     @Override

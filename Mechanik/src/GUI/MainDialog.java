@@ -17,7 +17,7 @@ import javax.swing.JPanel;
 @SuppressWarnings("serial")
 public class MainDialog extends JDialog {
 	
-	private static JPanel panel;
+	private static GamePanel panel;
 	private static Konsola txtArea;
 	
 	public MainDialog(){
@@ -40,6 +40,7 @@ public class MainDialog extends JDialog {
 		add(new SouthMainPanel(panel), BorderLayout.SOUTH);
 		add(new TopMainPanel(),BorderLayout.PAGE_START);
 	
+		System.out.println(((GamePanel) panel).xxx());
 	
 	}
 	

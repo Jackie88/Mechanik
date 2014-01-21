@@ -19,9 +19,9 @@ public class SouthMainPanel extends JPanel implements FocusListener, ActionListe
 	private JTextField txt;
 	private static String cmd;
 	private String newline = String.format("%n");
-	private JPanel Reka;
+	private GamePanel Reka;
 	
-	public SouthMainPanel(JPanel panel) {
+	public SouthMainPanel(GamePanel panel) {
 		
 		super();
 		Reka=panel;
@@ -68,9 +68,14 @@ public class SouthMainPanel extends JPanel implements FocusListener, ActionListe
 		txt.setText("");
 		String[] komendy = new String[20];
 		komendy = CommandFinder.LangInterpreter.Interpret(cmd);
-		for(String str : komendy){
-		if(str != null) MainDialog.getKonsola().append( str + newline);
 		
+		int controlInt=0;
+		for(String str : komendy){
+			if(str != null) MainDialog.getKonsola().append( str + newline);
+			if(komendy[controlInt].matches("repair")) Reka.getReka().napraw();
+			else if(komendy[controlInt].matches("investigate")) Reka.getReka().sprawdz();
+			Reka.repaint();
+			Reka.validate();	
 		}
 
 	}
