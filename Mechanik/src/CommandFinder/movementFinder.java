@@ -4,7 +4,7 @@ public class movementFinder {
 	public static String[] findMovement(String[] inputExpression){
 		String[] foundCommand = {"-1","-1"};
 		String[] movementWordList = {"id[zŸ]","porusz","rusz","le[cæ]","przejd[zŸ]","przeskocz","ruszaj","kiknij"};
-		String[] movementUpList = {"g[oó]r[aeê]","p[oó][l³]noc"};
+		String[] movementUpList = {"g[oó]r[aeêy]","p[oó][l³]noc"};
 		String[] movementRightList = {"prawo","wsch[oó]d"};
 		String[] movementDownList = {"d[oó][l³]","po[l³]udnie"};
 		String[] movementLeftList = {"lewo","zach[oó]d"};

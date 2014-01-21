@@ -1,6 +1,6 @@
 package GUI;
 
-import Controller.Action;
+
 import Grafa.*;
 
 import java.awt.*;
@@ -18,7 +18,7 @@ import javax.swing.JPanel;
 @SuppressWarnings("serial")
 public class GamePanel extends JPanel implements KeyListener {
 	
-	private Reka reka;
+	public Reka reka;
 	private Czesc[][] czesci;
 	private static int a=10;
 	private ImageIcon icon;
@@ -49,6 +49,10 @@ public class GamePanel extends JPanel implements KeyListener {
 		return a;
 	}
 	
+	public Reka getReka() {
+		return reka;
+	}
+	
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -69,7 +73,6 @@ public class GamePanel extends JPanel implements KeyListener {
             
         }
         
-        
     	//rysuje obrazek lapki
     	icon = new ImageIcon(new Resize().resize("img/reka.png", getWidth()/a-10,getHeight()/a-10,true));
         g.drawImage(icon.getImage(), (reka.getX()-1)*getWidth()/a+5, (reka.getY()-1)*getHeight()/a+5, null);
@@ -84,7 +87,7 @@ public class GamePanel extends JPanel implements KeyListener {
 	@Override
 	public void keyReleased(KeyEvent e) {
 		
-		new Action(e);
+		
 		
 		switch (e.getKeyCode()) {
 		
@@ -117,5 +120,9 @@ public class GamePanel extends JPanel implements KeyListener {
 	@Override
 	public void keyTyped(KeyEvent evt) {
 
+	}
+	
+	public int xxx(){
+		return 5;
 	}
 }

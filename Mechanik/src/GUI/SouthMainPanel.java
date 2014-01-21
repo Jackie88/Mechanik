@@ -19,10 +19,12 @@ public class SouthMainPanel extends JPanel implements FocusListener, ActionListe
 	private JTextField txt;
 	private static String cmd;
 	private String newline = String.format("%n");
+	private JPanel Reka;
 	
-	public SouthMainPanel() {
+	public SouthMainPanel(JPanel panel) {
 		
 		super();
+		Reka=panel;
 		setOpaque(false);
 		setLayout(new BorderLayout(20,20));
 		setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
@@ -38,6 +40,7 @@ public class SouthMainPanel extends JPanel implements FocusListener, ActionListe
 		
 		add(but, BorderLayout.EAST);
 		add(txt);
+		
 	}
 	
 	public static String getCmd () {
@@ -63,8 +66,12 @@ public class SouthMainPanel extends JPanel implements FocusListener, ActionListe
 		cmd=txt.getText();
 		//txt.setForeground(Color.lightGray);
 		txt.setText("");
+		String[] komendy = new String[20];
+		komendy = CommandFinder.LangInterpreter.Interpret(cmd);
+		for(String str : komendy){
+		if(str != null) MainDialog.getKonsola().append( str + newline);
 		
-		MainDialog.getKonsola().append("Ja : " + cmd + newline + "Komp : costam" + newline);
-	
+		}
+
 	}
 }

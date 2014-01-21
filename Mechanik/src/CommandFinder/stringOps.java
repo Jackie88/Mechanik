@@ -1,4 +1,4 @@
-package StringOps;
+package CommandFinder;
 public class stringOps {
 
 public static String[] przygotujZdanie(String Zdanie){
