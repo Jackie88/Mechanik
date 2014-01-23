@@ -124,7 +124,7 @@ public class GamePanel extends JPanel implements KeyListener {
         	MainDialog.getKonsola().append("Mechanik: "+czesci[reka.getX()][reka.getY()].wyswietlStan()+"\n");
         	break;
         case KeyEvent.VK_SPACE :
-        	MainDialog.getKonsola().append("Mechanik: "+czesci[reka.getX()][reka.getY()].napraw()+"\n");
+        	//MainDialog.getKonsola().append("Mechanik: "+czesci[reka.getX()][reka.getY()].napraw()+"\n");
         	break;
 		}
 		validate();

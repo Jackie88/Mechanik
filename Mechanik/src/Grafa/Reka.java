@@ -56,14 +56,18 @@ public class Reka{
 	
 	public void napraw(){
 		Czesc [] [] czesci =  panel.getCzesci();
-		czesci[getX()][getY()].napraw();
-    	MainDialog.getKonsola().append("Mechanik: "+czesci[getX()][getY()].napraw()+"\n");
-
+		
+		if(czesci[getX()][getY()]!=null) {
+			czesci[getX()][getY()].napraw();
+			MainDialog.getKonsola().append("Mechanik: "+czesci[getX()][getY()].napraw()+"\n");
+		}
 	}
 	public void sprawdz(){
 		Czesc [] [] czesci =  panel.getCzesci();
-		czesci[getX()][getY()].wyswietlStan();
-    	MainDialog.getKonsola().append("Mechanik: "+czesci[getX()][getY()].wyswietlStan()+"\n");
-
+		
+		if(czesci[getX()][getY()]!=null) {	
+			czesci[getX()][getY()].wyswietlStan();
+			MainDialog.getKonsola().append("Mechanik: "+czesci[getX()][getY()].wyswietlStan()+"\n");
+		}
 	}
 }
