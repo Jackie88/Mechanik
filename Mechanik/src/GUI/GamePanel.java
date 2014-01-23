@@ -10,6 +10,8 @@ import java.awt.event.KeyListener;
 //import java.awt.image.ImageObserver;
 //import java.net.URL;
 
+import java.awt.image.ImageObserver;
+
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -30,12 +32,18 @@ public class GamePanel extends JPanel implements KeyListener {
 		
         reka = new Reka(this,5,5);
         czesci = new Czesc[a][a];
-        czesci[4][3] = new Kolo("Nazwa",2);
-        czesci[4][7] = new Kolo("Nazwa2",2);
-        czesci[7][3] = new Kolo("Nazwa3",3);
-        czesci[7][7] = new Kolo("Nazwa4",1);
-        czesci[6][4] = new Bak("Nazwa",2);
-        czesci[6][7] = new Akumulator("Nazwa",2);
+        czesci[5][3] = new Kolo("Nazwa",2);
+        czesci[5][7] = new Kolo("Nazwa2",2);
+        czesci[8][3] = new Kolo("Nazwa3",3);
+        czesci[8][7] = new Kolo("Nazwa4",1);
+        czesci[6][4] = new Akumulator("Nazwa",2);
+        czesci[5][2] = new LampaLP("Nazwa",2);
+        czesci[8][2] = new LampaPP("Nazwa",2);
+        czesci[5][8] = new LampaLT("Nazwa",2);
+        czesci[8][8] = new LampaPT("Nazwa",2);
+        czesci[6][2] = new Tlumik("Nazwa",2);
+        czesci[6][6] = new Silnik("Nazwa",2);
+        czesci[7][4] = new Bak("Nazwa",2);
         
         setBorder(BorderFactory.createLoweredBevelBorder());
         setFocusable(true);
@@ -60,17 +68,19 @@ public class GamePanel extends JPanel implements KeyListener {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-         
-        g.drawImage((new ImageIcon(new Resize().resize("img/tlo2.jpg", getWidth(),getHeight(),true))).getImage(),0, 0, null);
-        g.drawImage((new ImageIcon(new Resize().resize("img/podwozie.png", (int)(2.6*getWidth()/a),(int)(5.5*getHeight()/a),true))).getImage(), (int)(3.7*getWidth()/a),2*getHeight()/a, null);
         
+        //rysuje t³o i podwozie
+        g.drawImage((new ImageIcon(new Resize().resize("img/tlo2.jpg", getWidth(),getHeight(),true))).getImage(),0, 0, null);
+        
+        g.drawImage(new ImageIcon(new Resize().resize("img/podwozie2.png", 4*getWidth()/a,7*getHeight()/a,true)).getImage(), 4*getWidth()/a, getHeight()/a, null);
+       
         for(int i=1; i<a; i++) {
         	g.setColor(Color.darkGray);
         	g.drawLine(i*getWidth()/a, 0, i*getWidth()/a, getHeight());
             g.drawLine(0, i*getHeight()/a, getWidth(), i*getHeight()/a);
             for(int j=1; j<a; j++)
             	if (czesci[i][j] != null){
-            		g.drawImage((new ImageIcon(new Resize().resize(czesci[i][j].getImage(), getWidth()/a-10,getHeight()/a-10,true))).getImage(),(i-1)*getWidth()/a+2, (j-1)*getHeight()/a+2, null);
+            		g.drawImage((new ImageIcon(new Resize().resize(czesci[i][j].getImage(), getWidth()/a,getHeight()/a,true))).getImage(),(i-1)*getWidth()/a, (j-1)*getHeight()/a, null);
             		
             	}
             g.setColor(Color.lightGray);

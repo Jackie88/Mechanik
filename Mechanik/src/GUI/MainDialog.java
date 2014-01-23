@@ -29,7 +29,7 @@ public class MainDialog extends JDialog {
 		setLayout(new BorderLayout(20, 20));
 		setTitle("Napraw swoje auto !");
 		setVisible(true);
-		setSize(new Dimension(800, 650));
+		setSize(new Dimension(803, 714));
 		setLocationRelativeTo(null);
 		
 		getContentPane().setBackground(Color.white);
@@ -40,7 +40,8 @@ public class MainDialog extends JDialog {
 		add(new SouthMainPanel(panel), BorderLayout.SOUTH);
 		add(new TopMainPanel(),BorderLayout.PAGE_START);
 	
-		System.out.println(((GamePanel) panel).xxx());
+		System.out.println(getWidth());
+		System.out.println(getHeight());
 	
 	}
 	

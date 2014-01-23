@@ -9,8 +9,8 @@ public class Akumulator extends Czesc{
 		super(nazwa, stan);
 		
 		switch(stan){
-		case 1: img = new ImageIcon("img/akumulator.png").getImage(); break;
-		case 2: img = new ImageIcon("img/akumulator2.png").getImage(); break;
+		case 1: img = new ImageIcon("img/aku.png").getImage(); break;
+		case 2: img = new ImageIcon("img/aku2.png").getImage(); break;
 		}
 	}
 	
@@ -29,7 +29,7 @@ public class Akumulator extends Czesc{
 			case 2: wykonana_akcja = "Pod³¹czy³em akumulator, zaraz bêdzie na³adowany";break;
 		};
 		this.stan = 1;
-		this.img = new ImageIcon("img/akumulator.png").getImage();
+		this.img = new ImageIcon("img/aku2.png").getImage();
 		return wykonana_akcja;
 	}
 }

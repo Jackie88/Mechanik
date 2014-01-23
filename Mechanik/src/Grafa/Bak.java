@@ -10,7 +10,7 @@ public class Bak extends Czesc{
 		
 		switch(stan){
 		case 1: img = new ImageIcon("img/bak.png").getImage(); break;
-		case 2: img = new ImageIcon("img/bak2.png").getImage(); break;
+		case 2: img = new ImageIcon("img/bak broke.png").getImage(); break;
 		}
 	}
 	

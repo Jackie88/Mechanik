@@ -10,7 +10,7 @@ public class Silnik extends Czesc{
 		
 		switch(stan){
 		case 1: img = new ImageIcon("img/silnik.png").getImage(); break;
-		case 2: img = new ImageIcon("img/silnik2.png").getImage(); break;
+		case 2: img = new ImageIcon("img/silnik broke.png").getImage(); break;
 		}
 	}
 	

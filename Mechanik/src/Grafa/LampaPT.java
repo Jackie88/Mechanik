@@ -9,8 +9,8 @@ public class LampaPT extends Czesc{
 		super(nazwa, stan);
 		
 		switch(stan){
-		case 1: img = new ImageIcon("img/lampapt.png").getImage(); break;
-		case 2: img = new ImageIcon("img/lampapt2.png").getImage(); break;
+		case 1: img = new ImageIcon("img/lampadp.png").getImage(); break;
+		case 2: img = new ImageIcon("img/lampadp2.png").getImage(); break;
 		}
 	}
 	
@@ -29,7 +29,7 @@ public class LampaPT extends Czesc{
 			case 2: wykonana_akcja = "Wymieni³em lampê";break;
 		};
 		this.stan = 1;
-		this.img = new ImageIcon("img/lampapt.png").getImage();
+		this.img = new ImageIcon("img/lampadp.png").getImage();
 		return wykonana_akcja;
 	}
 }
