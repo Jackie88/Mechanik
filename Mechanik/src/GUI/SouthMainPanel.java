@@ -68,15 +68,34 @@ public class SouthMainPanel extends JPanel implements FocusListener, ActionListe
 		txt.setText("");
 		String[] komendy = new String[20];
 		komendy = CommandFinder.LangInterpreter.Interpret(cmd);
-		
-		int controlInt=0;
-		for(String str : komendy){
-			if(str != null) MainDialog.getKonsola().append( str + newline);
-			if(komendy[controlInt].matches("repair")) Reka.getReka().napraw();
-			else if(komendy[controlInt].matches("investigate")) Reka.getReka().sprawdz();
+		//int controlInt=0;
+		for(int i=0;i<=19;i=i+2){
+			if(komendy[i] != null) MainDialog.getKonsola().append( komendy[i] + newline);
+			KomendySwitch komendySw = KomendySwitch.valueOf(komendy[i].toLowerCase());
+			switch(komendySw){
+				case repair: Reka.getReka().napraw();break;
+				case investigate: Reka.getReka().sprawdz();break;
+				case up: Reka.getReka().decrementY();break;
+				case down: Reka.getReka().incrementY();break;
+				case left: Reka.getReka().decrementX();break;
+				case right: Reka.getReka().incrementX();break;
+			}
+			/*if(str != null) MainDialog.getKonsola().append( str + newline);
+			if(str.matches("repair")) Reka.getReka().napraw();
+			else if(str.matches("investigate")) Reka.getReka().sprawdz();
+			else if(str.matches("up")) Reka.getReka().incrementX();*/
 			Reka.repaint();
 			Reka.validate();	
 		}
 
+	}
+	
+	public enum KomendySwitch {
+		repair,
+		investigate,
+		up,
+		down,
+		left,
+		right
 	}
 }

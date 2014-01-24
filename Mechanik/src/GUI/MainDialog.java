@@ -13,6 +13,7 @@ import java.awt.Dimension;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 
 @SuppressWarnings("serial")
 public class MainDialog extends JDialog {
@@ -25,6 +26,8 @@ public class MainDialog extends JDialog {
 		super();
 		panel =new GamePanel();
 		txtArea = new Konsola();
+		JScrollPane scr = new JScrollPane(txtArea,
+                JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 		
 		setLayout(new BorderLayout(20, 20));
 		setTitle("Napraw swoje auto !");
@@ -35,7 +38,7 @@ public class MainDialog extends JDialog {
 		getContentPane().setBackground(Color.white);
 		
 		add(panel);
-		add(txtArea,BorderLayout.EAST);
+		add(scr,BorderLayout.EAST);
 		add(new JLabel(""),BorderLayout.WEST);
 		add(new SouthMainPanel(panel), BorderLayout.SOUTH);
 		add(new TopMainPanel(),BorderLayout.PAGE_START);
