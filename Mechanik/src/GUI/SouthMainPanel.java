@@ -7,10 +7,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
+import java.util.concurrent.TimeUnit;
+
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.Timer;
 
 @SuppressWarnings("serial")
 public class SouthMainPanel extends JPanel implements FocusListener, ActionListener {
@@ -62,7 +65,15 @@ public class SouthMainPanel extends JPanel implements FocusListener, ActionListe
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		
+		Timer czas = new Timer(2000, new ActionListener()
+		{
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Reka.getReka().decrementY();
+				Reka.repaint();
+				Reka.validate();								
+			}
+		});
 		cmd=txt.getText();
 		//txt.setForeground(Color.lightGray);
 		txt.setText("");
@@ -75,10 +86,29 @@ public class SouthMainPanel extends JPanel implements FocusListener, ActionListe
 			switch(komendySw){
 				case repair: Reka.getReka().napraw();break;
 				case investigate: Reka.getReka().sprawdz();break;
-				case up: Reka.getReka().decrementY();break;
-				case down: Reka.getReka().incrementY();break;
-				case left: Reka.getReka().decrementX();break;
-				case right: Reka.getReka().incrementX();break;
+				case up:{
+					for(int krok=1; krok<=(Integer.parseInt(komendy[i+1]));krok++){
+						Reka.getReka().decrementY();
+						Reka.repaint();
+						Reka.validate();	
+					}
+					break;
+				}
+				case down:{
+					for(int krok=1; krok<=(Integer.parseInt(komendy[i+1]));krok++)
+					Reka.getReka().incrementY();
+					break;
+				}
+				case left:{
+					for(int krok=1; krok<=(Integer.parseInt(komendy[i+1]));krok++)
+					Reka.getReka().decrementX();
+					break;
+				}
+				case right:{
+					for(int krok=1; krok<=(Integer.parseInt(komendy[i+1]));krok++)
+					Reka.getReka().incrementX();
+					break;
+				}
 			}
 			/*if(str != null) MainDialog.getKonsola().append( str + newline);
 			if(str.matches("repair")) Reka.getReka().napraw();

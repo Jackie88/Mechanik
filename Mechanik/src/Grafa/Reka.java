@@ -1,5 +1,10 @@
 package Grafa;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.Timer;
+
 import GUI.GamePanel;
 import GUI.MainDialog;
 
@@ -51,7 +56,7 @@ public class Reka{
 	public void decrementY(){
 		y--;
 		if(y<1) 
-			y=k;
+			y=k;				
 }
 	
 	public void napraw(){

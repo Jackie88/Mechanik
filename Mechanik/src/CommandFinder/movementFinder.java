@@ -2,12 +2,12 @@ package CommandFinder;
 
 public class movementFinder {
 	public static String[] findMovement(String[] inputExpression){
-		String[] foundCommand = {"-1","-1"};
-		String[] movementWordList = {"id[zŸ]","porusz","rusz","le[cæ]","przejd[zŸ]","przeskocz","ruszaj","kiknij"};
-		String[] movementUpList = {"g[oó]r[aeêy]","p[oó][l³]noc"};
-		String[] movementRightList = {"prawo","wsch[oó]d"};
-		String[] movementDownList = {"d[oó][l³]","po[l³]udnie"};
-		String[] movementLeftList = {"lewo","zach[oó]d"};
+		String[] foundCommand = {"0","0"};
+		String[] movementWordList = {"id[zï¿½]","porusz","rusz","le[cï¿½]","przejd[zï¿½]","przeskocz","ruszaj","kiknij"};
+		String[] movementUpList = {"g[oï¿½]r[aeï¿½y]","p[oï¿½][lï¿½]noc"};
+		String[] movementRightList = {"prawo","wsch[oï¿½]d"};
+		String[] movementDownList = {"d[oï¿½][lï¿½]","po[lï¿½]udnie"};
+		String[] movementLeftList = {"lewo","zach[oï¿½]d"};
 		
 		for(String s1 : inputExpression){
 			for(String moveWordPattern : movementWordList )
