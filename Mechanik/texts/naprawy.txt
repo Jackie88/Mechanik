@@ -1,0 +1,69 @@
+AKUMULATOR_STAN_1
+Wszystko jest ok;
+Nie trzeba naprawiać;
+Naprawa jest nie potrzebna;
+Akumulatora nie trzeba naprawiać;
+Wygląda na to, że z akumulatorem wszystko w porządku;
+Akumulator jest na�adowany;
+Z akumulatorem wszystko w porz�dku;
+Akumulator nie porzebuje naprawy;
+Solidny akumulator;
+END
+
+AKUMULATOR_STAN_2
+Podłączyłem akumulator;
+Akumulator się ładuje;
+Za chwilę będzie gotowy do drogi;
+END
+
+BAK_STAN_1
+Bak jest w dobrym stanie;
+END
+
+BAK_STAN_2
+Zalepiłem dziurę w baku;
+END
+
+KATALIZATOR_STAN_1
+Z katalizatorem wszystko w porządku;
+END
+
+KATALIZATOR_STAN_2
+Naprawiłem katalizator;
+END
+
+KOLO_STAN_1
+Nie trzeba majstrować przy tym kole;
+END
+
+KOLO_STAN_2
+Napompowałem koło;
+END
+
+KOLO_STAN_3
+Koło naprawione;
+END
+
+LAMPA_STAN_1
+Z lampą wszystko ok;
+END
+
+LAMPA_STAN_2
+Lampa została naprawiona;
+END
+
+SILNIK_STAN_1
+Silnik jest sprawny, nie trzeba naprawiać;
+END
+
+SILNIK_STAN_2
+Naprawiłem silnik, można odpalać;
+END
+
+TLUMIK_STAN_1
+Tłumik jest sprawny;
+END
+
+TLUMIK_STAN_2
+Tłumik naprawiony;
+END

@@ -1,0 +1,67 @@
+AKUMULATOR_STAN_1
+Wszystko jest ok;
+Akumulator jest na�adowany;
+Z akumulatorem wszystko w porz�dku;
+Akumulator nie porzebuje naprawy;
+Solidny akumulator;
+END
+
+AKUMULATOR_STAN_2
+Akumulator roz�adowany;
+Niestety roz�adowany;
+Ach, trzeba na�adowa� akumulator;
+Musimy na�adowa� akumulator;
+Bez �adowania nie ruszy;
+END
+
+BAK_STAN_1
+Bak jest w dobrym stanie;
+END
+
+BAK_STAN_2
+Ojej! Dziura w baku;
+END
+
+KATALIZATOR_STAN_1
+Z katalizatorem wszystko w porządku;
+END
+
+KATALIZATOR_STAN_2
+Wygląda na to, że trzeba naprawić;
+END
+
+KOLO_STAN_1
+Koło w pełni sprawne;
+END
+
+KOLO_STAN_2
+Trzeba napompować koło;
+END
+
+KOLO_STAN_3
+Koło wymaga naprawy;
+END
+
+LAMPA_STAN_1
+Z lampą wszystko ok;
+END
+
+LAMPA_STAN_2
+Trzeba naprawić, może żarówka spalona;
+END
+
+SILNIK_STAN_1
+Silnik jest sprawny;
+END
+
+SILNIK_STAN_2
+Silnik niestety jest niesprawny;
+END
+
+TLUMIK_STAN_1
+Tłumik jest sprawny;
+END
+
+TLUMIK_STAN_2
+Trzba coś zrobić z tym tłumikiem;
+END

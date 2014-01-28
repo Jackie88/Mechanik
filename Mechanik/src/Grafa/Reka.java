@@ -63,7 +63,7 @@ public class Reka{
 		Czesc [] [] czesci =  panel.getCzesci();
 		
 		if(czesci[getX()][getY()]!=null) {
-			czesci[getX()][getY()].napraw();
+			//czesci[getX()][getY()].napraw();
 			MainDialog.getKonsola().append("Mechanik: "+czesci[getX()][getY()].napraw()+"\n");
 		}
 	}
@@ -71,7 +71,7 @@ public class Reka{
 		Czesc [] [] czesci =  panel.getCzesci();
 		
 		if(czesci[getX()][getY()]!=null) {	
-			czesci[getX()][getY()].wyswietlStan();
+			//czesci[getX()][getY()].wyswietlStan();
 			MainDialog.getKonsola().append("Mechanik: "+czesci[getX()][getY()].wyswietlStan()+"\n");
 		}
 	}

@@ -69,7 +69,7 @@ public class GamePanel extends JPanel implements KeyListener {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         
-        //rysuje t³o i podwozie
+        //rysuje tï¿½o i podwozie
         g.drawImage((new ImageIcon(new Resize().resize("img/tlo2.jpg", getWidth(),getHeight(),true))).getImage(),0, 0, null);
         
         g.drawImage(new ImageIcon(new Resize().resize("img/podwozie2.png", 4*getWidth()/a,7*getHeight()/a,true)).getImage(), 4*getWidth()/a, getHeight()/a, null);
@@ -124,7 +124,7 @@ public class GamePanel extends JPanel implements KeyListener {
         	MainDialog.getKonsola().append("Mechanik: "+czesci[reka.getX()][reka.getY()].wyswietlStan()+"\n");
         	break;
         case KeyEvent.VK_SPACE :
-        	//MainDialog.getKonsola().append("Mechanik: "+czesci[reka.getX()][reka.getY()].napraw()+"\n");
+        	MainDialog.getKonsola().append("Mechanik: "+czesci[reka.getX()][reka.getY()].napraw()+"\n");
         	break;
 		}
 		validate();
