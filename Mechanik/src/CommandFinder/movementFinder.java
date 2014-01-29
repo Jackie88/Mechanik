@@ -3,37 +3,12 @@ package CommandFinder;
 public class movementFinder {
 	public static String[] findMovement(String[] inputExpression){
 		String[] foundCommand = {"0","0"};
-		String[] movementWordList = {"id[zï¿½]","porusz","rusz","le[cï¿½]","przejd[zï¿½]","przeskocz","ruszaj","kiknij"};
-		String[] movementUpList = {"g[oï¿½]r[aeï¿½y]","p[oï¿½][lï¿½]noc"};
-		String[] movementRightList = {"prawo","wsch[oï¿½]d"};
-		String[] movementDownList = {"d[oï¿½][lï¿½]","po[lï¿½]udnie"};
-		String[] movementLeftList = {"lewo","zach[oï¿½]d"};
+		String[] movementWordList = {"id[zŸ½]","porusz","rusz","le[cæ]","przejd[zŸ]","przeskocz","ruszaj","kiknij"};
 		
 		for(String s1 : inputExpression){
 			for(String moveWordPattern : movementWordList )
 			if(s1.matches(moveWordPattern))
-				for(String s2 : inputExpression){
-					
-					for(String upWordPattern : movementUpList)
-					if(s2.matches(upWordPattern)){foundCommand[0]="up";
-					foundCommand[1]=valueFinder.findValue(inputExpression);
-					break;}
-					
-					for(String rightWordPattern : movementRightList)
-					if(s2.matches(rightWordPattern)){foundCommand[0]="right";
-					foundCommand[1]=valueFinder.findValue(inputExpression);
-					break;}
-					
-					for(String downWordPattern : movementDownList)
-					if(s2.matches(downWordPattern)){foundCommand[0]="down";
-					foundCommand[1]=valueFinder.findValue(inputExpression);
-					break;}
-					
-					for(String leftWordPattern : movementLeftList)
-					if(s2.matches(leftWordPattern)){foundCommand[0]="left";
-					foundCommand[1]=valueFinder.findValue(inputExpression);
-					break;}
-					
-		}}
+				foundCommand=directionFinder.findDirection(inputExpression);
+}
 		return foundCommand;}}
 
