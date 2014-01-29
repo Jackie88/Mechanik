@@ -4,7 +4,7 @@ package CommandFinder;
 public class LangInterpreter {
     public static String[] Interpret(String wprowadzonaKomenda)  { 
 
-        String[] czesciZdania = wprowadzonaKomenda.split(",");
+        String[] czesciZdania = wprowadzonaKomenda.split(",| i ");
         String[] action = new String[20];
         int licznik = 0;
         for(String i : czesciZdania){
