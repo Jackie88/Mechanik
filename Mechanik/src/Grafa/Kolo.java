@@ -5,15 +5,16 @@ import java.util.Random;
 
 import javax.swing.ImageIcon;
 
+
 public class Kolo extends Czesc{
 	
 	String[] komunikatyStanu3;
 	String[] komunikatyNaprawy3;
 	
-	public Kolo(String nazwa, int stan){
+	public Kolo(int stan){
 		
-		super(nazwa, stan);
-		
+		super(stan, true);
+		id=3;
 		switch(stan){
 		case 1: img = new ImageIcon("img/opona.png").getImage(); break;
 		case 2: img = new ImageIcon("img/opona2.png").getImage(); break;

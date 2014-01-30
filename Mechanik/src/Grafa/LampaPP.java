@@ -5,12 +5,13 @@ import java.util.Random;
 
 import javax.swing.ImageIcon;
 
+
 public class LampaPP extends Czesc{
 	
-	public LampaPP(String nazwa, int stan){
+	public LampaPP( int stan){
 		
-		super(nazwa, stan);
-		
+		super( stan, true);
+		id=6;
 		switch(stan){
 		case 1: img = new ImageIcon("img/lampagp.png").getImage(); break;
 		case 2: img = new ImageIcon("img/lampagp2.png").getImage(); break;

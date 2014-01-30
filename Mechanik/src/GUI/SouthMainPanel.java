@@ -10,6 +10,7 @@ import java.awt.event.FocusListener;
 import java.util.concurrent.TimeUnit;
 
 import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -83,7 +84,69 @@ public class SouthMainPanel extends JPanel implements FocusListener, ActionListe
 		for(int i=0;i<=19;i=i+2){
 			KomendySwitch komendySw = KomendySwitch.valueOf(komendy[i].toLowerCase());
 			switch(komendySw){
-				case repair: Reka.getReka().napraw();break;
+				case repair: {
+					if(Reka.getCzesci()[Reka.getReka().getX()][Reka.getReka().getY()]!=null){
+						Reka.getReka().napraw();
+					} else {
+						MainDialog.getKonsola().append("Mechanik: Nie ma czego naprawiac!" + newline);
+					}
+					
+					break;
+				}
+				
+				case pick : {
+					
+					if (Reka.getCzesci()[Reka.getReka().getX()][Reka.getReka().getY()].getDraw()) {
+						Reka.getCzesci()[Reka.getReka().getX()][Reka.getReka().getY()].changeIfDraw();
+	        			Reka.getReka().setImg(new ImageIcon(new Resize().resize(Reka.getCzesci()[Reka.getReka().getX()][Reka.getReka().getY()].getImage(), GamePanel.getW()/GamePanel.getA(),GamePanel.getH()/GamePanel.getA(),true)).getImage());
+	        			Reka.getReka().setID(Reka.getCzesci()[Reka.getReka().getX()][Reka.getReka().getY()].getID());
+	        			MainDialog.getKonsola().append("Mechanik: Juz podnoszê!" + newline);				
+					} else {
+						MainDialog.getKonsola().append("Mechanik: Ale tu przecie¿ nic nie ma." + newline);
+					}
+					
+					if(Reka.getReka().getX()==2)
+						Reka.getCzesci()[Reka.getReka().getX()][Reka.getReka().getY()].changeIfDraw();
+					break;
+				}
+				
+				case drop :{
+					
+					if(Reka.getReka().getImg()!=null)	{
+					if (Reka.getReka().getX()==3 && Reka.getReka().getY()==9) {
+						Reka.getReka().setImg(null);
+						MainDialog.getKonsola().append("Mechanik: Wyrzuci³em" + newline);
+					} else {
+						
+						MainDialog.getKonsola().append("Mechanik: Nie rób z warsztatu œmietnika! i wyrzuc to do smieci" + newline);
+					}
+					}	else 
+							MainDialog.getKonsola().append("Mechanik: Nie mam czego wyrzucic" + newline);
+					
+					break;
+					
+				}
+				
+				case swap: {
+					
+					if(Reka.getReka().getImg()==null)
+						MainDialog.getKonsola().append("Mechanik: Nie ma czego wstawiæ!" + newline);
+					else {
+						if (Reka.getCzesci()[Reka.getReka().getX()][Reka.getReka().getY()].getID()==Reka.getReka().getID()) { 
+							if(!Reka.getCzesci()[Reka.getReka().getX()][Reka.getReka().getY()].getDraw()) {
+							Reka.getReka().napraw();
+							MainDialog.getKonsola().append("Mechanik: Juz zamieniam!" + newline);
+							} else {
+								MainDialog.getKonsola().append("Mechanik: usun najpierw star¹ czêœæ!!" + newline);
+							}
+						} else {
+						MainDialog.getKonsola().append("Mechanik: To chyba nie ta czêœæ!" + newline);
+					}
+					}
+					break;
+					
+				}
+				
 				case investigate: Reka.getReka().sprawdz();break;
 				case up:{
 					for(int krok=1; krok<=(Integer.parseInt(komendy[i+1]));krok++){
@@ -129,6 +192,11 @@ public class SouthMainPanel extends JPanel implements FocusListener, ActionListe
 		up,
 		down,
 		left,
-		right
+		right,
+		pick,
+		drop,
+		swap
 	}
+	
+	
 }

@@ -1,9 +1,6 @@
 package Grafa;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import javax.swing.Timer;
+import java.awt.Image;
 
 import GUI.GamePanel;
 import GUI.MainDialog;
@@ -11,18 +8,35 @@ import GUI.MainDialog;
 public class Reka{
 	
 	private GamePanel panel;
-	private int x,y,k;
+	private int x,y,k, id;
+	Image part;
 	
 	public Reka(GamePanel temp, int a, int b){
+		id=0;
 		x = a;
 		y = b;
 		k=GamePanel.getA();
-		
+		part=null;
 		panel=temp;
 	}
 	
 	public int getX(){return x;}
 	public int getY(){return y;}
+	
+	public int getID() {return id;}
+	public void setID(int i) { id = i;}
+	
+	public void setImg(Image i) {
+		part = i;
+	}
+	
+	public void resetImg()
+	{
+		part=null;
+	}
+	public Image getImg() {
+		return part;
+	}
 	
 	public void setX(int a){
 		x = a; 
@@ -65,6 +79,9 @@ public class Reka{
 		if(czesci[getX()][getY()]!=null) {
 			//czesci[getX()][getY()].napraw();
 			MainDialog.getKonsola().append("Mechanik: "+czesci[getX()][getY()].napraw()+"\n");
+			part=null;
+			id=0;
+			czesci[getX()][getY()].ifDraw=true;
 		}
 	}
 	public void sprawdz(){

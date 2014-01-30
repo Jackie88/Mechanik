@@ -5,12 +5,13 @@ import java.util.Random;
 
 import javax.swing.ImageIcon;
 
+
 public class Silnik extends Czesc{
 	
-	public Silnik(String nazwa, int stan){
+	public Silnik( int stan){
 		
-		super(nazwa, stan);
-		
+		super(stan, true);
+		id=8;
 		switch(stan){
 		case 1: img = new ImageIcon("img/silnik.png").getImage(); break;
 		case 2: img = new ImageIcon("img/silnik broke.png").getImage(); break;

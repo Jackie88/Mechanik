@@ -2,15 +2,14 @@ package Grafa;
 
 import java.io.IOException;
 import java.util.Random;
-
 import javax.swing.ImageIcon;
 
 public class Tlumik extends Czesc{
 	
-	public Tlumik(String nazwa, int stan){
+	public Tlumik( int stan){
 		
-		super(nazwa, stan);
-		
+		super(stan, true);
+		id=9;
 		switch(stan){
 		case 1: img = new ImageIcon("img/tlumik.png").getImage(); break;
 		case 2: img = new ImageIcon("img/tlumik.png").getImage(); break;

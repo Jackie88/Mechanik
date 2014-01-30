@@ -43,8 +43,6 @@ public class MainDialog extends JDialog {
 		add(new SouthMainPanel(panel), BorderLayout.SOUTH);
 		add(new TopMainPanel(),BorderLayout.PAGE_START);
 	
-		System.out.println(getWidth());
-		System.out.println(getHeight());
 	
 	}
 	

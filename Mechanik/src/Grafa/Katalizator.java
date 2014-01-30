@@ -7,9 +7,9 @@ import javax.swing.ImageIcon;
 
 public class Katalizator extends Czesc{
 	
-	public Katalizator(String nazwa, int stan){
+	public Katalizator(int stan){
 		
-		super(nazwa, stan);
+		super(stan, true);
 		
 		switch(stan){
 		case 1: img = new ImageIcon("img/katalizator.png").getImage(); break;
@@ -44,4 +44,6 @@ public class Katalizator extends Czesc{
 		this.img = new ImageIcon("img/katalizator.png").getImage();
 		return wykonana_akcja;
 	}
+	
+	
 }

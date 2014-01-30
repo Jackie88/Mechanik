@@ -5,12 +5,13 @@ import java.util.Random;
 
 import javax.swing.ImageIcon;
 
+
 public class Bak extends Czesc{
 	
-	public Bak(String nazwa, int stan){
+	public Bak(int stan){
 		
-		super(nazwa, stan);
-		
+		super(stan, true);
+		id=2;
 		switch(stan){
 		case 1: img = new ImageIcon("img/bak.png").getImage(); break;
 		case 2: img = new ImageIcon("img/bak broke.png").getImage(); break;

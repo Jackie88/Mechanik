@@ -8,8 +8,8 @@ import CommandFinder.fileReader;
 
 public abstract class Czesc {
 	
-	int stan,idx;
-	String nazwa;
+	int stan,idx,id;
+	boolean ifDraw;
 	Image img;
 	String[] komunikatyStanu1;
 	String[] komunikatyStanu2;
@@ -19,8 +19,9 @@ public abstract class Czesc {
 	fileReader plikStanu;
 	fileReader plikNaprawy;
 	
-	public Czesc(String nazwa, int stan){
-		this.nazwa = nazwa;
+	
+	public Czesc(int stan, boolean b){
+		ifDraw = b;
 		this.stan = stan;
 		plikStanu = new fileReader("texts/komunikaty.txt");
 		plikNaprawy = new fileReader("texts/naprawy.txt");
@@ -29,6 +30,13 @@ public abstract class Czesc {
 	public abstract String wyswietlStan();
 	public abstract String napraw();
 	
+	public boolean getDraw() { return ifDraw; }
+	
+	public void changeIfDraw() { 
+		ifDraw = !ifDraw;
+		}
+	
 	public Image getImage(){return img;}
 
+	public int getID(){return id;}
 }

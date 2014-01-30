@@ -5,12 +5,13 @@ import java.util.Random;
 
 import javax.swing.ImageIcon;
 
+
 public class LampaLT extends Czesc{
 	
-	public LampaLT(String nazwa, int stan){
+	public LampaLT( int stan){
 		
-		super(nazwa, stan);
-		
+		super( stan, true);
+		id=5;
 		switch(stan){
 		case 1: img = new ImageIcon("img/lampadl.png").getImage(); break;
 		case 2: img = new ImageIcon("img/lampadl2.png").getImage(); break;

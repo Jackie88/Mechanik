@@ -7,9 +7,10 @@ import javax.swing.ImageIcon;
 
 public class Akumulator extends Czesc{
 	
-	public Akumulator(String nazwa, int stan){
+	public Akumulator(int stan){
 		
-		super(nazwa, stan);
+		super(stan, true);
+		id=1;
 		switch(stan){
 		case 1: img = new ImageIcon("img/aku.png").getImage(); break;
 		case 2: img = new ImageIcon("img/aku2.png").getImage(); break;
