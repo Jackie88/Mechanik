@@ -1,67 +1,101 @@
 AKUMULATOR_STAN_1
 Wszystko jest ok;
-Akumulator jest naï¿½adowany;
-Z akumulatorem wszystko w porzï¿½dku;
-Akumulator nie porzebuje naprawy;
-Solidny akumulator;
+Akumulator jest na³adowany.;
+Akumulator jest wp¹siu.;
+Z akumulatorem wszystko spoko.;
+Akumulator nie porzebuje naprawy.;
+Solidny akumulator, nie ma to tamto.;
 END
 
 AKUMULATOR_STAN_2
-Akumulator rozï¿½adowany;
-Niestety rozï¿½adowany;
-Ach, trzeba naï¿½adowaï¿½ akumulator;
-Musimy naï¿½adowaï¿½ akumulator;
-Bez ï¿½adowania nie ruszy;
+Z takim akumulatorem to nie pojedziemy.;
+Akumulator roz³adowany.;
+Kiedyœ pan go ostatnio ³adowa³?;
+Ach, trzeba na³adowaæ akumulator.;
+Trza siê braæ z ³adowanie.;
+Bez ³adowania nie ruszy.;
 END
 
 BAK_STAN_1
-Bak jest w dobrym stanie;
+Bak wygl¹da na ca³y.;
+Bak jest w dobrym stanie.;
+Nic naprawiaæ nie trzeba.;
+Wachê trzyma, bêdzie dobrze.;
 END
 
 BAK_STAN_2
-Ojej! Dziura w baku;
+Panie, wacha siê wylewa!;
+Ojej! Dziura w baku.;
+Dziurawy bak za dobrze nie wró¿y.;
+No z t¹ dziur¹ to daleko pan nie zajedziesz.;
+£e jery, przecie¿ z tego cieknie!;
 END
 
 KATALIZATOR_STAN_1
-Z katalizatorem wszystko w porzÄ…dku;
+Katalizatorek jak nowy!;
+Z katalizatorem wszystko w porz¹dku.;
+Panie, jeszcze ze dwa lata pos³u¿y!;
 END
 
 KATALIZATOR_STAN_2
-WyglÄ…da na to, Å¼e trzeba naprawiÄ‡;
+Wygl¹da na to, ¿e trzeba naprawiæ.;
+Nie wygl¹da to najlepiej.;
 END
 
 KOLO_STAN_1
-KoÅ‚o w peÅ‚ni sprawne;
+Ko³o w pe³ni sprawne.;
+Bêdzie siê kulaæ!;
+Gumowe i okr¹g³e, tak jak powinno byæ.;
 END
 
 KOLO_STAN_2
-Trzeba napompowaÄ‡ koÅ‚o;
+Trzeba napompowaæ ko³o.;
+No dziurawe, nie da siê ukryæ.;
+Flak.;
+No powietrza to pan w nim nie uœwiadczysz.
 END
 
 KOLO_STAN_3
-KoÅ‚o wymaga naprawy;
+Ko³o wymaga naprawy;
+Panie, po jakich dziurach pan jeŸdzisz?!;
+Coœ pan, po bia³oruskich autostradach jeŸdzi³eœ?;
+Samochód bez ko³a to jak ¿o³nierz bez karabinu, trza coœ zrobiæ.;
 END
 
 LAMPA_STAN_1
-Z lampÄ… wszystko ok;
+Z lamp¹ wszystko ok.;
+Œwieci. Tak jak powinno.;
+¯aróweczka jak ta lala.;
 END
 
 LAMPA_STAN_2
-Trzeba naprawiÄ‡, moÅ¼e Å¼arÃ³wka spalona;
+Trzeba naprawiæ, mo¿e ¿arówka siê spali³a.;
+Jak ¿arówczki nie ma, to jak ma œwieciæ?;
+W dzieñ to i pan pojeŸdzisz, ale w nocy ni [cenzura].;
+Dzieciaki kamieniami pewnie zbi³y.;
 END
 
 SILNIK_STAN_1
-Silnik jest sprawny;
+Silnik jest sprawny.;
+Panie, niemiecka robota, i za dziesiêæ lat bêdzie œmiga³!;
+Silnik bangla, nie ma nic do roboty.;
 END
 
 SILNIK_STAN_2
-Silnik niestety jest niesprawny;
+Silnik niestety jest niesprawny.;
+£o jeeeezu, jak pan chcesz z tym z³omem ruszyæ?;
+Panie kierowniku, nie wygl¹da to najlepiej.;
+No trzeba bêdzie trochê postukaæ.;
 END
 
 TLUMIK_STAN_1
-TÅ‚umik jest sprawny;
+T³umik jest sprawny.;
+T³umiczek w porz¹dku.;
+Coœ siê pan t³umika uczepi³, jak sprawny jest?;
 END
 
 TLUMIK_STAN_2
-Trzba coÅ› zrobiÄ‡ z tym tÅ‚umikiem;
+Trzba coœ zrobiæ z tym t³umikiem.;
+Panie, pó³ osiedla pan pobudzisz z takim t³umikiem.;
+Z tym siê ju¿ nic nie zrobi, do wymiany.;
 END

@@ -1,69 +1,101 @@
 AKUMULATOR_STAN_1
-Wszystko jest ok;
-Nie trzeba naprawiaÄ‡;
-Naprawa jest nie potrzebna;
-Akumulatora nie trzeba naprawiaÄ‡;
-WyglÄ…da na to, Å¼e z akumulatorem wszystko w porzÄ…dku;
-Akumulator jest naï¿½adowany;
-Z akumulatorem wszystko w porzï¿½dku;
-Akumulator nie porzebuje naprawy;
+Wszystko jest ok.;
+Nie trzeba naprawiaæ.;
+Naprawa jest nie potrzebna.;
+Panie, tu nie ma nic do roboty.;
+Wygl¹da na to, ¿e z akumulatorem wszystko w porz¹dku.;
+Akumulator jest na³adowany.;
+Z akumulatorem wszystko w porz¹dku.;
+Akumulator nie porzebuje naprawy.;
 Solidny akumulator;
 END
 
 AKUMULATOR_STAN_2
-PodÅ‚Ä…czyÅ‚em akumulator;
-Akumulator siÄ™ Å‚aduje;
-Za chwilÄ™ bÄ™dzie gotowy do drogi;
+Pod³¹czy³em akumulator.;
+Akumulator siê ³aduje.;
+Za chwilê bêdzie gotowy do akcji.;
+Ladujte se, ladujte se!;
 END
 
 BAK_STAN_1
-Bak jest w dobrym stanie;
+Panie, tu nie ma nic do roboty.;
+Bak jest w dobrym stanie.;
+No przecie¿ wszystko dzia³a.;
 END
 
 BAK_STAN_2
-ZalepiÅ‚em dziurÄ™ w baku;
+Zalepi³em dziurê w baku.;
+No i po k³opocie.;
+No teraz bêdzie dzia³a³.;
+By³a dziura, nie ma dziury.;
 END
 
 KATALIZATOR_STAN_1
-Z katalizatorem wszystko w porzÄ…dku;
+Z katalizatorem wszystko w porz¹dku.;
+Panie, tu nie ma nic do roboty.;
+Co pan chcesz tu naprawiaæ, jak wszystko dzia³a?;
 END
 
 KATALIZATOR_STAN_2
-NaprawiÅ‚em katalizator;
+Naprawi³em katalizator.;
+Tu siê dokrêci, tam pie... ekhm.;
+Teraz powinno dzia³aæ.;
 END
 
 KOLO_STAN_1
-Nie trzeba majstrowaÄ‡ przy tym kole;
+Panie, tu nie ma nic do roboty.;
+Co pan chcesz tu naprawiaæ, jak wszystko dzia³a?;
+Nie trzeba majstrowaæ przy tym kole.;
+Nie ma co ruszaæ, bo jeszcze siê zepsuje i bêdzie na mnie.;
 END
 
 KOLO_STAN_2
-NapompowaÅ‚em koÅ‚o;
+Napompowa³em ko³o.;
+M³ody dawaj sprê¿arkê, bêdziem pompowaæ.;
+Oponka jeszcze trochê poci¹gnie, bêdzie dobrze.;
 END
 
 KOLO_STAN_3
-KoÅ‚o naprawione;
+Ko³o naprawione.;
 END
 
 LAMPA_STAN_1
-Z lampÄ… wszystko ok;
+Z lamp¹ wszystko spoko.;
+Panie, tu nie ma nic do roboty.;
+Co pan chcesz tu naprawiaæ, jak wszystko dzia³a?;
+Nie ma co ruszaæ, bo jeszcze siê zepsuje i bêdzie na mnie.;
+No przecie¿ siê œwieci!;
 END
 
 LAMPA_STAN_2
-Lampa zostaÅ‚a naprawiona;
+Lampa zosta³a naprawiona;
+¯aróweczka wymieniona, bêdzie dobrze.;
+O, œwieci!;
 END
 
 SILNIK_STAN_1
-Silnik jest sprawny, nie trzeba naprawiaÄ‡;
+Panie, tu nie ma nic do roboty.;
+Co pan chcesz tu naprawiaæ, jak wszystko dzia³a?;
+Nie ma co ruszaæ, bo jeszcze siê zepsuje i bêdzie na mnie.;
+Silnik jest sprawny, nie trzeba naprawiaæ.;
+No przecie¿ wszystko piknie gra i buczy.;
+Z takim silnikiem to pan nawet do Pekinu zajedziesz, po co go ruszaæ?;
 END
 
 SILNIK_STAN_2
-NaprawiÅ‚em silnik, moÅ¼na odpalaÄ‡;
+Naprawi³em silnik, mo¿na odpalaæ.;
+Tu siê przykrêci, tam nasmaruje... i bêdzie jeŸdzi³!;
+Trochê brudu by³o, teraz powinno byæ si.;
 END
 
 TLUMIK_STAN_1
-TÅ‚umik jest sprawny;
+Nic rusza³ nie bêdê, wszystko dzia³a.;
+T³umik jest sprawny.;
+Co pan, dobrego t³umika poznaæ nie potrafisz?;
 END
 
 TLUMIK_STAN_2
-TÅ‚umik naprawiony;
+T³umik naprawiony.;
+Zepsuty by³, to naprawi³em.;
+No, tera to je spoko.;
 END
