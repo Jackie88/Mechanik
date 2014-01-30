@@ -4,7 +4,7 @@ public class investigateFinder {
 	public static String[] findInvestigate(String[] inputExpression){
 		
 		String[] foundCommand = {"-1","-1"};
-		String[] investigateWordList = {"sprawd[zü]","ogarnij","zbadaj","testuj"};
+		String[] investigateWordList = {"sprawd[zü]","ogarnij","zbadaj","testuj","zjebao","zepsute","zepsu[l≥]o"};
 		
 		for(String s1 : inputExpression){
 			for(String investigateWordPattern : investigateWordList)
@@ -12,5 +12,4 @@ public class investigateFinder {
 		}
 		return foundCommand;
 	}
-
 }

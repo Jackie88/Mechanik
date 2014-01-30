@@ -4,7 +4,7 @@ public class repairFinder {
 	public static String[] findRepair(String[] inputExpression){
 		
 		String[] foundCommand = {"-1","-1"};
-		String[] repairWordList = {"napraw","nareperuj","zreperuj","za[l³]ataj","zaklej","zaklajstruj","napompuj","pompuj"};
+		String[] repairWordList = {"napraw","nareperuj","zreperuj","za[l³]ataj","zaklej","zaklajstruj","napompuj","pompuj","[l³]ataj"};
 		
 		for(String s1 : inputExpression){
 			for(String repairWordPattern : repairWordList)

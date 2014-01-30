@@ -81,7 +81,6 @@ public class SouthMainPanel extends JPanel implements FocusListener, ActionListe
 		komendy = CommandFinder.LangInterpreter.Interpret(cmd);
 		//int controlInt=0;
 		for(int i=0;i<=19;i=i+2){
-			if(komendy[i] != null) MainDialog.getKonsola().append( komendy[i] + newline);
 			KomendySwitch komendySw = KomendySwitch.valueOf(komendy[i].toLowerCase());
 			switch(komendySw){
 				case repair: Reka.getReka().napraw();break;
@@ -92,21 +91,25 @@ public class SouthMainPanel extends JPanel implements FocusListener, ActionListe
 						Reka.repaint();
 						Reka.validate();	
 					}
+					MainDialog.getKonsola().append("Mechanik: Poruszy³em o " + komendy[i+1] + " w górê." + newline);
 					break;
 				}
 				case down:{
 					for(int krok=1; krok<=(Integer.parseInt(komendy[i+1]));krok++)
 					Reka.getReka().incrementY();
+					MainDialog.getKonsola().append("Mechanik: Poruszy³em o " + komendy[i+1] + " w dó³." + newline);
 					break;
 				}
 				case left:{
 					for(int krok=1; krok<=(Integer.parseInt(komendy[i+1]));krok++)
 					Reka.getReka().decrementX();
+					MainDialog.getKonsola().append("Mechanik: Poruszy³em o " + komendy[i+1] + " w lewo." + newline);
 					break;
 				}
 				case right:{
 					for(int krok=1; krok<=(Integer.parseInt(komendy[i+1]));krok++)
 					Reka.getReka().incrementX();
+					MainDialog.getKonsola().append("Mechanik: Poruszy³em o " + komendy[i+1] + " w prawo." + newline);
 					break;
 				}
 			}
