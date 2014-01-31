@@ -4,8 +4,8 @@ public class carryObjectFinder {
 	public static String[] findCarryObject(String[] inputExpression){
 		
 		String[] foundCommand = {"-1","-1"};
-		String[] pickWordList = {"we[zŸ]","podnie[sœ]","z[l³]ap","unie[sœ]","wznie[sœ]","d[zŸ]wignij"};
-		String[] dropWordList = {"zostaw","od[l³][oó][z¿]","po[l³][oó][z¿]","wyrzu[cæ]"};
+		String[] pickWordList = {"we[zŸ]","podnie[sœ]","z[l³]ap","unie[sœ]","wznie[sœ]","d[zŸ]wignij","bier"};
+		String[] dropWordList = {"zostaw","od[l³][oó][z¿]","po[l³][oó][z¿]","wyrzu[cæ]","wypierdol"};
 		String[] swapWordList = {"zamie[nñ]","podmie[nñ]","wymie[nñ]","zmie[nñ]"};
 		
 		for(String s1 : inputExpression){

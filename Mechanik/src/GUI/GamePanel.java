@@ -5,6 +5,7 @@ import Grafa.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.Random;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
@@ -27,18 +28,18 @@ public class GamePanel extends JPanel implements KeyListener {
 		
         reka = new Reka(this,5,5);
         czesci = new Czesc[a][a];
-        czesci[5][3] = new Kolo(2);
-        czesci[5][7] = new Kolo(1);
-        czesci[8][3] = new Kolo(2);
-        czesci[8][7] = new Kolo(3);
-        czesci[6][4] = new Akumulator(2);
-        czesci[5][2] = new LampaLP(1);
-        czesci[8][2] = new LampaPP(2);
-        czesci[5][8] = new LampaLT(2);
-        czesci[8][8] = new LampaPT(1);
-        czesci[6][2] = new Tlumik(2);
-        czesci[6][6] = new Silnik(1);
-        czesci[7][4] = new Bak(2);
+        czesci[5][3] = new Kolo((new Random().nextInt(3))+1);
+        czesci[5][7] = new Kolo((new Random().nextInt(3))+1);
+        czesci[8][3] = new Kolo((new Random().nextInt(3))+1);
+        czesci[8][7] = new Kolo((new Random().nextInt(3))+1);
+        czesci[6][4] = new Akumulator((new Random().nextInt(2))+1);
+        czesci[5][2] = new LampaLP((new Random().nextInt(2))+1);
+        czesci[8][2] = new LampaPP((new Random().nextInt(2))+1);
+        czesci[5][8] = new LampaLT((new Random().nextInt(2))+1);
+        czesci[8][8] = new LampaPT((new Random().nextInt(2))+1);
+        czesci[6][2] = new Tlumik((new Random().nextInt(2))+1);
+        czesci[6][6] = new Silnik((new Random().nextInt(2))+1);
+        czesci[7][4] = new Bak((new Random().nextInt(2))+1);
         
         czesci[2][2] = new Kolo(1);
         czesci[2][3] = new Akumulator(1);
@@ -88,8 +89,8 @@ public class GamePanel extends JPanel implements KeyListener {
                
         for(int i=1; i<a; i++) {
         	g.setColor(Color.darkGray);
-        	//g.drawLine(i*getWidth()/a, 0, i*getWidth()/a, getHeight());
-            //g.drawLine(0, i*getHeight()/a, getWidth(), i*getHeight()/a);
+        	g.drawLine(i*getWidth()/a, 0, i*getWidth()/a, getHeight());
+            g.drawLine(0, i*getHeight()/a, getWidth(), i*getHeight()/a);
             
            for(int j=1; j<a; j++)
             	if (czesci[i][j] != null && czesci[i][j].getDraw()){
@@ -156,5 +157,16 @@ public class GamePanel extends JPanel implements KeyListener {
 	
 	public int xxx(){
 		return 5;
+	}
+	
+	public void sprawdzWszystko(){
+		int koncz = 1;
+		for(int i=1; i<a; i++) {
+           for(int j=1; j<a; j++)
+            	if (czesci[i][j] != null){
+            		if(czesci[i][j].getStan()!=1) koncz=0;
+            	}
+		}
+		if (koncz==1)MainDialog.getKonsola().append("Mechanik: WOW WOW TAK BARDZO DZIALA WOW!!");
 	}
 }

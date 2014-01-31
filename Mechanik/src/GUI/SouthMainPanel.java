@@ -176,12 +176,10 @@ public class SouthMainPanel extends JPanel implements FocusListener, ActionListe
 					break;
 				}
 			}
-			/*if(str != null) MainDialog.getKonsola().append( str + newline);
-			if(str.matches("repair")) Reka.getReka().napraw();
-			else if(str.matches("investigate")) Reka.getReka().sprawdz();
-			else if(str.matches("up")) Reka.getReka().incrementX();*/
+			
 			Reka.repaint();
-			Reka.validate();	
+			Reka.validate();
+			Reka.sprawdzWszystko();
 		}
 
 	}
@@ -197,6 +195,5 @@ public class SouthMainPanel extends JPanel implements FocusListener, ActionListe
 		drop,
 		swap
 	}
-	
 	
 }

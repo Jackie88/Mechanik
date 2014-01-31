@@ -36,6 +36,10 @@ public abstract class Czesc {
 		ifDraw = !ifDraw;
 		}
 	
+	public int getStan(){
+		return stan;
+	}
+	
 	public Image getImage(){return img;}
 
 	public int getID(){return id;}
