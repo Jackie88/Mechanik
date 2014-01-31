@@ -3,6 +3,7 @@ package GUI;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusEvent;
@@ -66,20 +67,17 @@ public class SouthMainPanel extends JPanel implements FocusListener, ActionListe
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		Timer czas = new Timer(2000, new ActionListener()
-		{
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				Reka.getReka().decrementY();
-				Reka.repaint();
-				Reka.validate();								
-			}
-		});
+		
 		cmd=txt.getText();
 		//txt.setForeground(Color.lightGray);
+		MainDialog.getKonsola().setFont(new Font(Font.SERIF, Font.PLAIN, 16));
+		MainDialog.getKonsola().append("Ja: " +cmd + newline);
+		
 		txt.setText("");
 		String[] komendy = new String[20];
 		komendy = CommandFinder.LangInterpreter.Interpret(cmd);
+		
+		
 		//int controlInt=0;
 		for(int i=0;i<=19;i=i+2){
 			KomendySwitch komendySw = KomendySwitch.valueOf(komendy[i].toLowerCase());
